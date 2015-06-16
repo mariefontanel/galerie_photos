@@ -1,0 +1,7 @@
+<%= link_to 'Ajouter une photo', upload_path %>
+
+<% @image.each do |i| %>
+  <%= image_tag i.avatar.url %>
+  <%= image_tag i.avatar.url(:medium) %>
+  <%= image_tag i.avatar.url(:thumb) %>
+<% end %>
