@@ -1,7 +1,13 @@
 class GalerieController < ApplicationController
 	def index
     @image = Image.all
+    @tags = Image.select(:tag).map{|x| x.tag}.join(' ')
+    
 	end
+
+  def show
+    @image = Image.find(params[:id])
+  end
 
 	def new
     @image = Image.new
