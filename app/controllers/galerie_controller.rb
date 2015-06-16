@@ -1,7 +1,7 @@
 class GalerieController < ApplicationController
 	def index
     @image = Image.all
-    @tags = Image.select(:tag).map{|x| x.tag}.join(' ')
+    @tags = Image.select(:tag).map{|x| x.tag}.uniq.sample(2)
     
 	end
 
@@ -23,6 +23,12 @@ class GalerieController < ApplicationController
       render 'new'
     end
 	end
+
+  def recherche
+    @image = Image.where(tag: params[:tag])
+    @tags = Image.select(:tag).map{|x| x.tag}.uniq.sample(2)
+    render 'index'
+  end
 
   private
 
