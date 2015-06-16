@@ -1,9 +1,50 @@
-<%= link_to 'Ajouter une photo', upload_path %>
+<h1>Galerie photos by SimplonVE</h1>
+  
+  <div class="recherche">
 
-<div>Tag :<%= @tags %></div>
- 
+    <div class ="barre">
+        <form action="" class="formulaire">
+        <input class="champ" type="text" value="Rechercher une photo"/>  
+        <input class="bouton" type="button" value="OK"/> 
+        </form>
+    </div>
+
+    <div class="tag">
+        <dl class ="listetag">
+          <dt class="theme"> <a href="images_nature" title="imgnat"> foret</a> </dt>
+          <dt class="theme"> <a href="images_sport" title="imgnat"> sport</a> </dt>
+          <dt class="theme"> <a href="images_animaux" title="imgnat"> lapin</a> </dt>
+          <dt class="theme"> <a href="images_véhicule" title="imgnat"> clio</a> </dt>
+          <dt class="theme"> <a href="images_animaux" title="imgnat"> lapin</a> </dt>
+          <dt class="theme"> <a href="images_véhicule" title="imgnat"> clio</a> </dt>
+        </dl>
+    </div>
+
+  </div>
+
+  <div class="galerie">
+  <p>1</p>
+  <p>2></p><p>3</p><p>5</p><p>5</p><p>2></p><p>3</p><p>5</p><p>5</p><p>2></p><p>3</p><p>5</p><p>5</p>
+
+
+
+  </div>
+  
+  <div class ="ajout">
+ <%= link_to 'Ajouter une photo', upload_path %></div>
+
+<div>
+<% @tags.each do |tag| %>
+  <a href="/search/<%= tag %>">
+    <%= tag %>
+  </a>
+<% end %>
+</div>
+
 <% @image.each do |i| %>
   <a href="image/<%= i.id %>">
     <%= image_tag i.avatar.url(:medium) %>
+    <%= i.titre %>
+    <%= i.tag %>
   </a>
 <% end %>
