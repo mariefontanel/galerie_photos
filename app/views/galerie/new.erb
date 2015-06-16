@@ -1,0 +1,15 @@
+<%= form_for :upload do |f| %>
+	<%= f.label :titre %>
+	<%= f.text_field :titre %>
+
+	<%= f.label :tag %>
+	<%= f.text_field :tag %>
+
+	<%= f.label :lien %>
+	<%= f.file_field :avatar %>
+
+	<%= f.submit 'Envoyer' %>
+
+<% end %>
+
+<%= link_to 'Retour à la galerie', root_path %>

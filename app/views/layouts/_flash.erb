@@ -1,0 +1,7 @@
+<% if flash[:success] %>
+  <div class='label label-success'><%= flash[:success] %></div>
+<% elsif flash[:error] %>
+  <div class='label label-error'><%= flash[:error] %></div>
+<% else %>
+  <div class='label label-notice'><%= flash[:notice] %></div>
+<% end %>
