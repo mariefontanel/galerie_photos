@@ -53,9 +53,12 @@ h1 {
 	flex-wrap:wrap;
 	justify-content: space-around;
 	width: 100%;
-
+	
 }
-
+.unite{
+	display: flex;
+	max-width:20%;
+}
 .ajout {
 	
 }
