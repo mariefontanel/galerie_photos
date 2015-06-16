@@ -31,17 +31,22 @@
 	</div>
 	
 	<div class ="ajout">
+<%= link_to 'Ajouter une photo', upload_path %>
 	</div>
 
+<div>
+<% @tags.each do |tag| %>
+  <a href="/search/<%= tag %>">
+    <%= tag %>
+  </a>
+<% end %>
+</div>
 
-=====================================================
 
-<%= link_to 'Ajouter une photo', upload_path %>
-
-<div>Tag :<%= @tags %></div>
- 
 <% @image.each do |i| %>
   <a href="image/<%= i.id %>">
     <%= image_tag i.avatar.url(:medium) %>
+    <%= i.titre %>
+    <%= i.tag %>
   </a>
 <% end %>
