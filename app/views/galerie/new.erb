@@ -1,3 +1,5 @@
+<div class="formulaire-galerie">
+<h1>Ajouter votre photo</h1>
 <%= form_for :upload do |f| %>
 	<%= f.label :titre %>
 	<%= f.text_field :titre %>
@@ -5,11 +7,12 @@
 	<%= f.label :tag %>
 	<%= f.text_field :tag %>
 
-	<%= f.label :lien %>
 	<%= f.file_field :avatar %>
 
+	<div class="boutons">
+	<%= link_to 'Retour à la galerie', root_path %>
 	<%= f.submit 'Envoyer' %>
+	</div>
 
 <% end %>
-
-<%= link_to 'Retour à la galerie', root_path %>
+</div>
