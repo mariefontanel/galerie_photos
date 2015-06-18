@@ -5,7 +5,6 @@
 	<div class ="barre">
 		<form action="" class="formulaire">
 			<input class="champ" type="text" placeholder="Rechercher une photo"/>  
-			<input class="bouton" type="button" value="OK"/> 
 		</form>
 	</div>
 
@@ -27,12 +26,11 @@
 		<a href="image/<%= i.id %>">
 			<%= image_tag i.avatar.url(:medium) %>
 		</a>
-			<%= i.titre %>
-			<%= i.tag %>
+		<div class="info">
+			<div><%= i.titre %></div>
+			<div><%= i.tag %></div>
+		</div>	
 		<% end %>
 
 	</div>
 
-	<footer>
-		
-	</footer>

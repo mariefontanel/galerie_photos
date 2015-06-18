@@ -41,7 +41,6 @@ h1 {
 	border:solid;	
 }
 
-
 .listetag{
 	display:flex;
 	flex-direction:row;
@@ -51,14 +50,6 @@ h1 {
 	position:relative;
 	width:40%; 
 	height:5%;
-	
-}
-
-.theme {
-	justify-content:space-around;
-	padding: 5% 10% 2% 10%;
-
-
 }
 
 .galerie {
@@ -68,13 +59,11 @@ h1 {
 	flex-wrap:wrap;
 	justify-content: space-around;
 	width: 100%;
-	
 }
-.unite{
-	display: flex;
-	max-width:20%;
+.galerie a{
+
 }
-.ajout{
+.ajout, {
 	display:flex;
 	float: left;
 	position: fixed;
@@ -110,8 +99,6 @@ h1 {
 	color:#00518a;
 	border-color: #00518a;
 }
-
-
 .barre {
 	position:relative;
 	width:40%; 
@@ -119,7 +106,7 @@ h1 {
 
 }
 
-	.formulaire {
+.formulaire {
 		display:inline-block;
 		display: flex;
 		text-align: center;
@@ -129,12 +116,7 @@ h1 {
 			width:400px; 
 			height:35px;
 		}
-		.formulaire .bouton { 
-			background-repeat: no-repeat;
-			width: 35px;
-			height: 42px;
-			padding: 0; 
-		}
+		
 .formulaire-galerie {
 	display: flex;
 	flex-direction: column;
@@ -157,7 +139,11 @@ h1 {
 .formulaire-galerie form input[type=text]{
 	line-height: 2.20em;
 }
-.boutons{
+.boutons {
 	display: flex;
 	flex-direction: row;
+}
+.info{
+	display: felx;
+	flex-direction:column;
 }
