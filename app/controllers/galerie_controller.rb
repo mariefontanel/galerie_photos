@@ -1,7 +1,8 @@
 class GalerieController < ApplicationController
 	def index
     @image = Image.all
-    @tags = Image.select(:tag).map{|x| x.tag}.uniq.sample(5)
+    @tags = [] << Image.all.map { |x| x.tag.split(' ')}
+    @tags = @tags.flatten.uniq.sample(3)
   end
 
   def show
@@ -24,8 +25,9 @@ class GalerieController < ApplicationController
 	end
 
   def recherche
-    @image = Image.where(tag: params[:tag])
-    @tags = Image.select(:tag).map{|x| x.tag}.uniq.sample(5)
+    @image = Image.where("tag like ?", "%#{params[:tag]}%")
+    @tags = [] << Image.all.map { |x| x.tag.split(' ')}
+    @tags = @tags.flatten.uniq.sample(3)
     render 'index'
   end
 

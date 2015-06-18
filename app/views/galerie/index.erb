@@ -29,9 +29,9 @@
 		<% @image.each do |i| %>
 		<a href="image/<%= i.id %>">
 			<%= image_tag i.avatar.url(:medium) %>
+		</a>
 			<%= i.titre %>
 			<%= i.tag %>
-		</a>
 		<% end %>
 
 	</div>
