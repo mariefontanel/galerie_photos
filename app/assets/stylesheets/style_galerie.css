@@ -1,4 +1,15 @@
-html, body { height: 100% }
+@font-face {
+font-family: 'Raleway';
+src: url('Raleway/Raleway-Medium.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+html, body { 
+	height: 100%;
+	margin: 0;
+	padding: 0; 
+	font-family: 'Raleway';
+}
 
 h1 {
 	text-align: center;
@@ -14,17 +25,15 @@ h1 {
 	margin-right: 5%;
 }
 
-.tag{
+.recherche-tag{
 	display:flex;
 	flex-direction:row;
 	flex-wrap:wrap;
 	justify-content:space-around;
 	position:relative;
-	width:40%; 
-	height:5%;
-	border: solid 2px;
-	padding: auto;
-	
+	width:40%;
+	height: 50px;
+	border:solid 1px;	
 }
 
 .listetag{
@@ -60,8 +69,31 @@ h1 {
 	max-width:20%;
 }
 .ajout {
-	
+	display:flex;
+	float: left;
+	position: fixed;
+	bottom: 0;
+	width:100%;
+	height: 100px;
+	background-color: #ecf0f1;
+	box-shadow: 0 0 5px 0 rgba(0,0,0,0.25);
+	justify-content:center;
+	align-items:center;
 }
+
+.ajout a {
+	text-decoration: none;
+	border: solid 2px black;
+	padding: 10% 5%;
+	font-size: 1.125em;
+	color: #000;
+}
+
+.ajout a:hover {
+	color:#00518a;
+	border-color: #00518a;
+}
+
 
 .barre {
 	position:relative;

@@ -1,4 +1,4 @@
-<h1>Galerie photos by SimplonVE</h1>
+<h1>Galerie photos</h1>
 
 <div class="recherche">
 
@@ -9,16 +9,13 @@
 		</form>
 	</div>
 
-	<div class="tag">
-		<dl class ="listetag">
-			<dt><div>
-				<% @tags.each do |tag| %>
-				<a href="/search/<%= tag %>">
-					<%= tag %>
-				</a>
-				<% end %>  </dt>
-			</dl>
-		</div>
+	<div class="recherche-tag">
+		<% @tags.each do |tag| %>
+			<a href="/search/<%= tag %>">
+				<div class="tag"><%= tag %></div>
+			</a>
+		<% end %>  
+	</div>
 
 	</div>
 	<div class ="ajout">
