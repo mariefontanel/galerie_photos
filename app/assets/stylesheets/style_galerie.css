@@ -1,9 +1,10 @@
 @font-face {
-font-family: 'Raleway';
-src: url('Raleway/Raleway-Medium.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
+	font-family: 'Raleway';
+	src: url('Raleway/Raleway-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -22,7 +23,19 @@ h1 {
 	margin-bottom: 5%;
 }
 
-.recherche {
+
+/* ===== Page Index ===== */
+
+/* Recherche photos */
+.galerie-topbar {
+
+}
+
+.galerie-topbar h1 {
+
+}
+
+.galerie-recherche {
 	display: flex;
 	flex-direction: row;
 	flex-wrap:wrap;
@@ -30,147 +43,185 @@ h1 {
 	margin-right: 5%;
 }
 
-.recherche-tag{
-	display:flex;
-	flex-direction:row;
-	flex-wrap:wrap;
-	justify-content:space-around;
-	position:relative;
-	width:40%;
-	height: 50px;
-	border:solid;	
-}
-
-.listetag{
-	display:flex;
-	flex-direction:row;
-	flex-wrap:wrap;
-	justify-content:space-around;
-	padding: 2%;
+.galerie-recherche form {
 	position:relative;
 	width:40%; 
-	height:5%;
+	/*height*/
 }
 
-.galerie {
-	-webkit-flex-direction:row;
+.galerie-recherche form input[type=text] {
+	/*width
+	height*/
+}
+
+.galerie-recherche form input[type=submit] {
+	
+}
+
+/* Galerie photos */
+.galerie-photos {
 	display: flex;
 	flex-direction: row;
+	-webkit-flex-direction:row;
 	flex-wrap:wrap;
 	justify-content: space-around;
 	width: 100%;
 }
-.galerie a{
+
+.photos {
 
 }
-.ajout {
+
+.photos:hover {
+
+}
+
+.photos-infos {
+
+}
+
+.photos:hover .photos-infos {
+
+}
+
+/* Ajout photos */
+.galerie-bottombar {
 	display:flex;
 	flex-direction:row;
-	float: left;
+	justify-content:center;
+	align-items:center;
 	position: fixed;
 	bottom: 0;
+	float: left;
 	width:100%;
 	height: 100px;
 	background-color: #ecf0f1;
 	box-shadow: 0 0 5px 0 rgba(0,0,0,0.25);
-	justify-content:center;
-	align-items:center;
 }
 
-.ajout a, .formulaire-galerie form a, .formulaire-galerie form input[type=submit], .boutons a {
-	text-decoration: none;
-	border: solid 2px black;
-	padding: 0% 5%;
-	font-size: 1.125em;
-	color: #000;
-	height: 50px;
-	width: auto;
+.galerie-bottombar a {
 	display: flex;
 	justify-content:center;
 	align-items:center;
+	width: auto;
+	height: 50px;
+	padding: 0% 5%;
+	color: #000;
+	font-size: 1.125em;
+	border: solid 2px black;
+	text-decoration: none;
 }
 
-.formulaire-galerie form input[type=submit] {
-	background-color: transparent;
-	justify-content:space-around;
-	align-items:center;
-	float: left;
-}
-
-.ajout a:hover, .formulaire-galerie form a:hover, .formulaire-galerie form input[type=submit]:hover, .boutons a:hover {
+.galerie-bottombar a:hover {
 	color:#00518a;
 	border-color: #00518a;
 }
-.barre {
-	position:relative;
-	width:40%; 
-	height:auto;
 
+
+/* ===== Page New ===== */
+
+/* Formulaire */
+.galerie-ajout {
+	display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 93%;
+  padding-top: 7%;
 }
-
-.formulaire-recherche {
-		display:inline-block;
-		display: flex;
-		text-align: center;
-	}
-
-		.formulaire-recherche .champ {
-			width:400px; 
-			height:35px;
-		}
-		
-.boite-formulaire {
-	display:flex;
-	justify-content:center;
-	width: 100%;
-	height: 100%;
-	margin-top: 3%;
-	padding: 5% 3%;	
-}
-
-.formulaire-galerie h1 {
-	margin-bottom: 15%;
-}
-.formulaire-galerie {
+.galerie-formulaire {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 25px;
 	width: 60%;
 	height: 60%;
+	margin-top: 25px;
 }
-.formulaire-galerie form{
+
+.galerie-formulaire form {
 	display: flex;
 	flex-direction: column;
 	width: 70%;
-	margin-top: 20px;
-
+	height: 100%;
 }
-.formulaire-galerie form input{
+
+.galerie-formulaire-champ {
+	display: block;
 	float: left;
 	width: 100%;
-	margin-bottom: 50px;
+	margin: 8% 0;
 }
-.formulaire-galerie form input[type=text]{
+.galerie-formulaire form input[type=text] {
+	float: left;
+	width: 100%;
 	line-height: 2.20em;
 }
-.boutons {
+
+.galerie-formulaire-bouton {
 	display:flex;
 	justify-content:space-around;
 	align-items:center;
 	margin-top: 60px;
+}
+
+.galerie-formulaire-bouton a, .galerie-formulaire-bouton input[type=submit] {
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 225px;
+	height: 50px;
+	padding: 0% 5%;
+	color: #000;
+	font-size: 1.125em;
+	border: solid 2px black;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.galerie-formulaire-bouton a:hover, .galerie-formulaire-bouton input[type=submit]:hover {
+	color:#00518a;
+	border-color: #00518a;
+	cursor: pointer;
+}
+
+/* ===== Page Show ===== */
+
+/* Rendu */
+.galerie-visuel {
 
 }
-.boutons a{
-	margin-bottom:50px;
+
+.galerie-image-visu {
+
+}
+
+.galerie-telecharger {
+
+}
+
+.galerie-telecharger a {
+
+}
+
+.galerie-telecharger a:hover {
+
+}
+
+.galerie-images-infos {
+
+}
+
+
+.label {
 
 }
 
 .label-success {
-	color: blue;
 	position: absolute;
-	left: 80%;
 	top: 10%;
+	left: 80%;
+	color: blue;
+}
+.label-error {
 	
 }

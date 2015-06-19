@@ -1,36 +1,42 @@
-<h1>Galerie photos</h1>
+<div class="galerie-topbar">
+	<h1>Galerie photos</h1>
 
-<div class="recherche">
+	<div class="galerie-recherche">
+		<%= form_tag "/search", :method => 'get' do %>
+			<%= text_field_tag :tag, params[:tag], placeholder:"Rechercher des images par tags, exemple \"#{@exemple}\", ... Vous pouvez rechercher plusieurs tags en les séparant par des espaces." %>
 
-	<div class ="barre">
-		<form action="" class="formulaire-recherche">
-			<input class="champ" type="text" placeholder="Rechercher une photo"/>  
-		</form>
-	</div>
-
-	<div class="recherche-tag">
-		<% @tags.each do |tag| %>
-			<a href="/search/<%= tag %>">
-				<div class="tag"><%= tag %></div>
-			</a>
-		<% end %>  
-	</div>
-
-	</div>
-	<div class ="ajout">
-		<%= link_to 'Ajouter une photo', upload_path %>
-	</div>
-
-	<div class="galerie">
-		<% @image.each do |i| %>
-		<a href="image/<%= i.id %>">
-			<%= image_tag i.avatar.url(:medium) %>
-		</a>
-		<div class="info">
-			<div><%= i.titre %></div>
-			<div><%= i.tag %></div>
-		</div>	
+			<%= submit_tag 'Rechercher' %>
 		<% end %>
-
 	</div>
+</div>
 
+<% if !current_page?('/') %>
+	<div class="retour-galerie">
+		<%= link_to 'Retour à la galerie', root_path %>
+	</div>
+<% end %>
+
+<div class="galerie-photos">
+	<% if @images == [] %> 
+		<div class="aucune-photo">
+			Aucune photo ne correspond à votre recherche.
+		</div>
+	<% else %>
+		<% @images.each do |i| %>
+			<div class="photos">
+				<a href="image/<%= i.id %>">
+					<%= image_tag i.avatar.url(:medium) %>
+				</a>
+				<div class="photos-infos">
+					<div><%= i.titre %></div>
+					<div><%= i.tag %></div>
+				</div>	
+			</div>	
+		<% end %>
+	<% end %>
+</div>
+
+
+<div class ="galerie-bottombar">
+	<%= link_to 'Ajouter une photo', upload_path %>
+</div>

@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   post 'upload' => 'galerie#create'
 
   get 'image/:id' => 'galerie#show'
-  get 'search/:tag' => 'galerie#recherche'
+  get 'search' => 'galerie#recherche'
+  get 'image/download/:id' => 'galerie#telecharger'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
