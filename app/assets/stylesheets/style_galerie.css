@@ -63,7 +63,7 @@ h1 {
 .galerie a{
 
 }
-.ajout, {
+.ajout {
 	display:flex;
 	float: left;
 	position: fixed;
