@@ -65,6 +65,7 @@ h1 {
 }
 .ajout {
 	display:flex;
+	flex-direction:row;
 	float: left;
 	position: fixed;
 	bottom: 0;
@@ -76,26 +77,27 @@ h1 {
 	align-items:center;
 }
 
-.ajout a, .formulaire-galerie form a, .formulaire-galerie form input[type=submit] {
+.ajout a, .formulaire-galerie form a, .formulaire-galerie form input[type=submit], .boutons a {
 	text-decoration: none;
 	border: solid 2px black;
 	padding: 0% 5%;
 	font-size: 1.125em;
 	color: #000;
 	height: 50px;
+	width: auto;
 	display: flex;
 	justify-content:center;
 	align-items:center;
 }
 
-.formulaire-galerie form a, .formulaire-galerie form input[type=submit] {
+.formulaire-galerie form input[type=submit] {
 	background-color: transparent;
-	width: 35%;
-	margin-left: 10%;
+	justify-content:space-around;
+	align-items:center;
 	float: left;
 }
 
-.ajout a:hover, .formulaire-galerie form a:hover, .formulaire-galerie form input[type=submit]:hover {
+.ajout a:hover, .formulaire-galerie form a:hover, .formulaire-galerie form input[type=submit]:hover, .boutons a:hover {
 	color:#00518a;
 	border-color: #00518a;
 }
@@ -106,28 +108,42 @@ h1 {
 
 }
 
-.formulaire {
+.formulaire-recherche {
 		display:inline-block;
 		display: flex;
 		text-align: center;
 	}
 
-		.formulaire .champ {
+		.formulaire-recherche .champ {
 			width:400px; 
 			height:35px;
 		}
 		
+.boite-formulaire {
+	display:flex;
+	justify-content:center;
+	width: 100%;
+	height: 100%;
+	margin-top: 3%;
+	padding: 5% 3%;	
+}
+
+.formulaire-galerie h1 {
+	margin-bottom: 15%;
+}
 .formulaire-galerie {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 20px;
+	margin-top: 25px;
+	width: 60%;
+	height: 60%;
 }
 .formulaire-galerie form{
 	display: flex;
 	flex-direction: column;
-	width: 50%;
+	width: 70%;
 	margin-top: 20px;
 
 }
@@ -140,10 +156,21 @@ h1 {
 	line-height: 2.20em;
 }
 .boutons {
-	display: flex;
-	flex-direction: row;
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	margin-top: 60px;
+
 }
-.info{
-	display: felx;
-	flex-direction:column;
+.boutons a{
+	margin-bottom:50px;
+
+}
+
+.label-success {
+	color: blue;
+	position: absolute;
+	left: 80%;
+	top: 10%;
+	
 }
