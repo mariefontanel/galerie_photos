@@ -38,7 +38,7 @@ class GalerieController < ApplicationController
       @recherche.each do |r|
         @image << Image.where("tag like ?", "%#{r}%")
       end
-    @images = @image.flatten
+    @images = @image.flatten.uniq
     @tags = [] << Image.all.map { |x| x.tag.split(' ')}
     @tags = @tags.flatten.uniq.sample(3)
     @exemple = @tags.join(', ')
