@@ -12,7 +12,7 @@
 
 <% if !current_page?('/') %>
 	<div class="retour-galerie">
-		<%= link_to 'Retour à la galerie', root_path %>
+		<a href="/"><i class="fa fa-arrow-left"></i>Retour à la galerie</a>
 	</div>
 <% end %>
 
@@ -29,10 +29,20 @@
 				</a>
 				<div class="photos-infos">
 					<div><%= i.titre %></div>
-					<div><%= i.tag %></div>
+					<div>
+						<% i.tag.split(' ').each do |tag| %>
+							<a href="/search/<%= tag %>"><%= tag %></a>
+						<% end %>
+					</div>
 				</div>	
 			</div>	
 		<% end %>
+	<% end %>
+
+	<% if !current_page?('/') %>
+		<div class="retour-galerie">
+			<a href="/"><i class="fa fa-arrow-left"></i>Retour à la galerie</a>
+		</div>
 	<% end %>
 </div>
 

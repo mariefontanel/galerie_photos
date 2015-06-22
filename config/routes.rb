@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get 'image/:id' => 'galerie#show'
   get 'search' => 'galerie#recherche'
+  get 'search/:tag' => 'galerie#recherche'
   get 'image/download/:id' => 'galerie#telecharger'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
