@@ -69,7 +69,8 @@ h1 {
 }
 
 .photos {
-
+	
+	
 }
 
 .photos:hover {
@@ -78,6 +79,7 @@ h1 {
 
 .photos-infos {
 
+	
 }
 
 .photos:hover .photos-infos {
@@ -192,22 +194,57 @@ h1 {
 }
 
 .galerie-image-visu {
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction:row;
+	flex-wrap:wrap;
+	justify-content: space-around;
+	width: 75%;
 
 }
 
 .galerie-telecharger {
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction:row;
+	flex-wrap:wrap;
+	justify-content: space-around;
+	width: 20%;
+	margin-left: 80%;
+	margin-top: -20%;
+	
 
 }
 
 .galerie-telecharger a {
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 120px;
+	height: 50px;
+	color: #000;
+	font-size: 1.125em;
+	border: solid 2px black;
+	background-color: transparent;
+	text-decoration: none;
+
+	
 
 }
 
 .galerie-telecharger a:hover {
+	background-color: transparent;
+	text-decoration: none;
+	color:#00518a;
+	border-color: #00518a;
+	cursor: pointer;
+}
+
 
 }
 
 .galerie-images-infos {
+	
 
 }
 
@@ -219,7 +256,7 @@ h1 {
 .label-success {
 	position: absolute;
 	top: 10%;
-	left: 80%;
+	text-align: center;
 	color: blue;
 }
 .label-error {
