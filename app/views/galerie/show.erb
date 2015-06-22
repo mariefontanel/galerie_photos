@@ -1,20 +1,26 @@
 <div class="galerie-visuel">
-  <div class="galerie-titre-photo">
-    <h1><%= @image.titre %></h1>
-  </div>
+  <div class="galerie-image-show">
+    <div class="galerie-titre-photo">
+      <h1><%= @image.titre %></h1>
+    </div>
 
-  <div class="galerie-image-visu">
-    <%= image_tag @image.avatar.url %>
-  </div>
+    <div class="galerie-image-visu">
+      <%= image_tag @image.avatar.url %>
+    </div>
 
-  <div class="galerie-telecharger">
-    <a href="/image/download/<%= @image.id %>">Télécharger</a>
-  </div>
+    <div class="galerie-telecharger">
+      <a href="/image/download/<%= @image.id %>">Télécharger</a>
+    </div>
 
-  <div class="galerie-image-infos">
-    <!-- Insérer ici le each pour sortir en auto les infos de l'image -->
+    <div class="galerie-image-infos">
+      <!-- Insérer ici le each pour sortir en auto les infos de l'image -->
+      <div class="galerie-infos-ligne"><p>Titre:</p><p><%= @titre %></p></div>
+      <div class="galerie-infos-ligne"><p>Tags:</p><p><%= @tag %></p></div>
+      <div class="galerie-infos-ligne"><p>Nom de l'image:</p><p><%= @nom_fichier %></p></div>
+      <div class="galerie-infos-ligne"><p>Poids de l'image:</p><p><%= @poids_image %> Ko</p></div>
+    </div>
   </div>
-
+  
   <div class="galerie-bottombar">
     <%= link_to 'Retour à la galerie', root_path %>
   </div>

@@ -8,6 +8,10 @@ class GalerieController < ApplicationController
 
   def show
     @image = Image.find(params[:id])
+    @titre = @image.titre
+    @tag = @image.tag 
+    @nom_fichier = @image.avatar_file_name
+    @poids_image = @image.avatar_file_size/1000
   end
 
   def new
