@@ -109,18 +109,15 @@ h1 {
 
 .photos {
 	position: relative;	
-	z-index:1;
 }
 
 .photos-infos {
 	display:none;
 	position:absolute;
-	bottom: 55%;
-	left:1%;
+	bottom: 0%;
 	width: 100%;
 	text-align: center;
-	padding: 1% 3%;
-	z-index: 2;
+	padding: 2% 3%;
 }
 .photos-infos a {
 	text-decoration: none;
@@ -129,13 +126,12 @@ h1 {
 
 .photos-infos a:hover {
 	text-decoration: underline;
-	font-size: 1.25em;
 }
 
 
 .photos:hover .photos-infos {
 	display:block;
-	background-color: rgba(205, 254, 248, 0.7);
+	background-color: rgba(255,255,255,0.5)
 }
 
 /* Ajout photos */

@@ -1,6 +1,6 @@
 class GalerieController < ApplicationController
   def index
-    @images = Image.all
+    @images = Image.all.reverse
     @tags = [] << Image.all.map { |x| x.tag.split(' ')}
     @tags = @tags.flatten.uniq.sample(3)
     @exemple = @tags.join(', ')
