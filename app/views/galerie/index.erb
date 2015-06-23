@@ -17,7 +17,11 @@
 <% end %>
 
 <div class="galerie-photos">
-	<% if @images == [] %> 
+	<% if @images == [] && current_page?('/')%> 
+		<div class="aucune-photo">
+			Aucune photo dans la galerie.
+		</div>
+	<% elsif @images == [] %> 
 		<div class="aucune-photo">
 			Aucune photo ne correspond à votre recherche.
 		</div>
