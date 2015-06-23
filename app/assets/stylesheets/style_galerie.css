@@ -100,7 +100,7 @@ h1 {
 	border: 2px solid;
 	text-decoration: none;
 	padding: 0.4%;
-	color: #000;
+	color: #fff;
 }
 
 .retour-galerie a i {
@@ -112,16 +112,19 @@ h1 {
 }
 
 .photos-infos {
-	display:none;
-	position:absolute;
-	bottom: 0%;
-	width: 100%;
-	text-align: center;
-	padding: 2% 3%;
+	display: none;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  text-align: center;
+  padding: 2% 3%;
+  color: #fff;
+  font-weight: bold;
 }
 .photos-infos a {
 	text-decoration: none;
-	color: #125cfb;
+	color: #fff;
+	font-weight: normal;
 }
 
 .photos-infos a:hover {
@@ -131,7 +134,7 @@ h1 {
 
 .photos:hover .photos-infos {
 	display:block;
-	background-color: rgba(255,255,255,0.5)
+	background-color: rgba(0,0,0,0.75)
 }
 
 /* Ajout photos */
